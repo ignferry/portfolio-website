@@ -4,6 +4,7 @@ import Project from '@/components/Project'
 import Experience from '@/components/Experience'
 import ProjectFilterBtn from '@/components/ProjectFilterBtn'
 import { useState } from 'react'
+import HeroImage from '@/components/HeroImage'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,9 +20,9 @@ export default function Home() {
   let projects = [
     {
       title: "Bluesound",
-      techs: ["Java", "Javascript", "MySQL", "ExpressJS", "React", "Docker"],
-      desc: "A web based music player which consists of four major components: normal user client (Plain PHP), premium user client (Reach), REST API (Plain PHP and ExpressJS), and SOAP API (Java).",
-      imgsrc: "/logo_iit.png",
+      techs: ["Java", "Javascript", "MySQL", "NodeJS", "React", "Docker"],
+      desc: "A web based music player which consists of four major components: normal user client and API (Plain PHP), premium user client (Reach), REST API (NodeJS), and SOAP API (Java).",
+      imgsrc: "/project-img/bluesound.png",
       codeurl: "https://gitlab.informatika.org/if3110-2022-k02-01-30",
       main: true
     },
@@ -31,6 +32,22 @@ export default function Home() {
       desc: "A note taking app",
       imgsrc: "/logo_iit.png",
       codeurl: "https://github.com/ignferry/Note-Taking-App-PHP",
+      main: true
+    },
+    {
+      title: "Aether Wars",
+      techs: ["Java", "JavaFX"],
+      desc: "A Minecraft themed turn based card game like Yu-Gi-Oh!.",
+      imgsrc: "/project-img/aetherwars.png",
+      codeurl: "https://github.com/ignferry/AetherWars",
+      main: true
+    },
+    {
+      title: "BNMO Backend",
+      techs: ["Typescript", "NodeJS", "MySQL"],
+      desc: "A REST API that handles authentication and user transactions (requests and transfers)",
+      imgsrc: "/project-img/aetherwars.png",
+      codeurl: "https://github.com/ignferry/AetherWars",
       main: true
     },
   ];
@@ -66,7 +83,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <img src="/hero.png"></img>
+              <HeroImage />
             </div>
 
             <a href="#education" className="text-5xl text-center w-fit mx-auto hover:font-bold hover:scale-150 animate-bounce">&#8964;</a>
@@ -168,8 +185,8 @@ export default function Home() {
                 time="Jan 2022 - Present"
                 imgsrc="/logo_iit.png"
                 points={[
-                  "Audit",
-                  "Accounting"
+                  "Assisted 6 project managers in creating project financial documents",
+                  "Performed monthly financial audits"
                   ]}/>
 
               <Experience 
@@ -178,8 +195,8 @@ export default function Home() {
                 time="May 2021 - Nov 2021"
                 imgsrc="/logo_infest.png"
                 points={[
-                  "Audit",
-                  "Accounting"
+                  "Collaborated with a team of 9 people to conduct market research on financial workshops and seminars.",
+                  "Contacted several renowned individuals in the financial industry and successfully got one of them to be a speaker in the seminar."
                   ]}/>
             </div>
           </section>
@@ -191,13 +208,13 @@ export default function Home() {
           <p className="font-semibold text-xl">Ignasius Ferry Priguna</p>
           <p>ignasius.ferry01@gmail.com</p>
           <div className="flex gap-4">
-            <a href="https://www.linkedin.com/in/ignasius-ferry-priguna/" className="w-14 h-14 bg-white rounded-full flex" target="_blank">
+            <a href="https://www.linkedin.com/in/ignasius-ferry-priguna/" className="w-14 h-14 bg-white rounded-full flex hover:bg-gray-300" target="_blank">
               <img src="/linkedin-logo.svg" className="w-14 h-14 m-auto object-cover"></img>
             </a>
-            <a href="https://github.com/ignferry" className="w-14 h-14 bg-white rounded-full flex" target="_blank">
+            <a href="https://github.com/ignferry" className="w-14 h-14 bg-white rounded-full flex hover:bg-gray-300" target="_blank">
               <img src="/github-logo.svg" className="w-12 h-12 m-auto object-cover"></img>
             </a>
-            <a href="https://gitlab.informatika.org/ignferry" className="w-14 h-14 bg-white rounded-full flex" target="_blank">
+            <a href="https://gitlab.informatika.org/ignferry" className="w-14 h-14 bg-white rounded-full flex hover:bg-gray-300" target="_blank">
               <img src="/gitlab-logo-600.svg" className="w-16 h-16 m-auto object-cover"></img>
             </a>
           </div>
