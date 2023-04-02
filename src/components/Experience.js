@@ -2,7 +2,7 @@ export default function Experience(props) {
     const points = [];
 
     for (const point of props.points) {
-        points.push(<li key={point}>{point}</li>);
+        points.push(<li key={point} className="text-justify">{point}</li>);
     }
 
     return (
@@ -12,9 +12,9 @@ export default function Experience(props) {
                     <img src={props.imgsrc} className="h-16 w-16 m-auto object-cover"></img>
                 </div>
                 <div className="h-fit">
-                    <h2 className="text-xl">{props.position}</h2>
-                    <p>{props.organization}</p>
-                    <p>{props.time}</p>
+                    <h2 className="text-xl font-bold">{props.position}</h2>
+                    <p className="text-slate-300">{props.organization}</p>
+                    <p className="text-slate-300">{props.time}</p>
                 </div>
             </div>
             <ul className="list-disc ml-5">

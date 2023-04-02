@@ -2,7 +2,32 @@ export default function Project(props) {
     const techs = [];
 
     for (const tech of props.techs) {
-        techs.push(<span className="text-sm box-border border-2 w-fit p-2 mr-2 mb-2 rounded" key={tech}>{tech}</span>);
+        techs.push(<span className="text-sm box-border border-2 w-fit p-2 mb-2 rounded" key={tech}>{tech}</span>);
+    }
+
+    const codeButton = () => {
+        if (props.codeurl.includes("github")) {
+            return <button 
+                className="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded inline-flex items-center w-fit"
+                type="submit">
+                <picture>
+                    <source srcSet="github-logo.svg" media="(prefers-color-scheme: dark)"></source>
+                    <img src="github-logo-white.svg" className="h-6 mr-2"></img>
+                </picture>
+                <span className="text-sm">GitHub</span>
+            </button>
+        }
+        else if (props.codeurl.includes("gitlab")) {
+            return <button 
+                className="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded inline-flex items-center w-fit"
+                type="submit">
+                <picture>
+                    <source srcSet="gitlab-logo-600.svg" media="(prefers-color-scheme: dark)"></source>
+                    <img src="gitlab-logo-700.svg" className="h-6 mr-2"></img>
+                </picture>
+                <span className="text-sm">GitLab</span>
+            </button>
+        }
     }
 
     return (
@@ -11,7 +36,7 @@ export default function Project(props) {
             <div className="flex flex-col flex-1 p-6">
                 <h3 className="py-2 text-lg font-semibold leading-snug">{props.title}</h3>
                 
-                <div className="flex flex-row flex-wrap">
+                <div className="flex flex-row flex-wrap gap-2">
                     {techs}
                 </div>
 
@@ -19,16 +44,8 @@ export default function Project(props) {
                     {props.desc}
                 </p>
 
-                <form action={props.github} method="get" target="_blank">
-                    <button 
-                        className="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded inline-flex items-center w-fit"
-                        type="submit">
-                        <picture>
-                            <source srcSet="github-mark.svg" media="(prefers-color-scheme: dark)"></source>
-                            <img src="github-mark-white.svg" className="h-6 mr-2"></img>
-                        </picture>
-                        <span className="text-sm">GitHub</span>
-                    </button>
+                <form action={props.codeurl} method="get" target="_blank">
+                    {codeButton()}
                 </form>
             </div>
         </article>  
