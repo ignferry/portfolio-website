@@ -22,7 +22,7 @@ export default function Home() {
     {
       title: "Bluesound",
       techs: ["HTML", "CSS", "Java", "PHP", "Javascript", "MySQL", "NodeJS", "React", "Docker"],
-      desc: "A web based music player and subscription management which consists of four major components: normal user client and API (PHP), premium user client (React), REST API (NodeJS), and SOAP API (Java). This is a Web Based Development coursework project done by 3 people in which I am mainly in charge of the frontend and backend in PHP and SOAP API in Java.",
+      desc: "A web-based music player and subscription management which consists of four major components: normal user client and API (PHP), premium user client (React), REST API (NodeJS), and SOAP API (Java). This is a Web-Based Development coursework project done by 3 people in which I am mainly in charge of the frontend and backend in PHP and SOAP API in Java.",
       imgsrc: "/project-img/bluesound.png",
       codeurl: "https://gitlab.informatika.org/if3110-2022-k02-01-30",
       main: true
@@ -30,15 +30,15 @@ export default function Home() {
     {
       title: "Aether Wars",
       techs: ["Java", "JavaFX"],
-      desc: "A Minecraft themed turn based card game like Yu-Gi-Oh!. This is a Object Oriented Programming coursework project done by 5 people in which I am in charge of creating the GUI with JavaFX and implementing the Publisher-Subscriber design pattern for the game.",
+      desc: "A Minecraft-themed turn-based card game like Yu-Gi-Oh!. This is a Object Oriented Programming coursework project done by 5 people in which I am in charge of creating the GUI with JavaFX and implementing the Publisher-Subscriber design pattern for the game.",
       imgsrc: "/project-img/aetherwars.png",
       codeurl: "https://github.com/ignferry/AetherWars",
       main: true
     },
     {
-      title: "Note Taking Website",
+      title: "Note-Taking Website",
       techs: ["HTML", "CSS", "PHP", "MySQL", "Docker"],
-      desc: "A note taking website with authentication and CRUD operations for notes. In this project, I designed and created my own routing system and ORM in plain PHP.",
+      desc: "A note-taking website with authentication and CRUD operations for notes. In this project, I designed and created my own routing system and ORM in plain PHP.",
       imgsrc: "/project-img/notetakingapp.png",
       codeurl: "https://github.com/ignferry/Note-Taking-App-PHP",
       main: true
@@ -46,7 +46,7 @@ export default function Home() {
     {
       title: "Portfolio Website",
       techs: ["HTML", "CSS", "Javascript", "React", "Tailwind CSS"],
-      desc: "A website created to present my profile and projects, also to present my frontend development skills. From this project, I've learned to create responsive web pages and adjustment of appearence based on user light and dark mode preference.",
+      desc: "A website created to present my profile and projects, also to present my frontend development skills. From this project, I've learned to create responsive web pages and adjustment of appearence-based on user light and dark mode preference.",
       imgsrc: "/project-img/portfolio-web.png",
       codeurl: "https://github.com/ignferry/portfolio-website",
       main: true
@@ -54,7 +54,7 @@ export default function Home() {
     {
       title: "Android Food App",
       techs: ["Kotlin"],
-      desc: "A food themed android application with features such as menu, cart, payment, location list, and twibbon. This is a Platform Based Development project done by 3 people in which I am in charge of the payment and location list page.",
+      desc: "A food-themed android application with features such as menu, cart, payment, location list, and twibbon. This is a Platform-Based Development project done by 3 people in which I am in charge of the payment and location list page.",
       codeurl: "https://gitlab.informatika.org/ignferry/if3210-2023-android-ogt",
       imgsrc: "/project-img/android.png",
       main: true
@@ -62,7 +62,7 @@ export default function Home() {
     {
       title: "BNMO Backend",
       techs: ["Typescript", "NodeJS", "MySQL", "Docker"],
-      desc: "A REST API that handles authentication and user financial transactions (requests and transfers). This is one of my first web development project from which I've learned to create REST APIs and use Sequelize ORM",
+      desc: "A REST API that handles authentication and user financial transactions (requests and transfers). This is one of my first web development project from which I've learned to create REST APIs and use Sequelize ORM.",
       codeurl: "https://github.com/ignferry/AetherWars",
       main: true
     },
@@ -86,7 +86,7 @@ export default function Home() {
                   Hi! I'm Ferry
                 </h1>
 
-                <a href="" target="_blank"className="mt-10 font-semibold py-2 pr-4 rounded inline-flex items-center w-full sm:w-auto justify-center hover:scale-110 transition ease-in-out">
+                <a href="https://drive.google.com/file/d/1dVfd-0VF1PS_OIPpipt3Er8AKCW3C9hh/view?usp=sharing" target="_blank"className="mt-10 font-semibold py-2 pr-4 rounded inline-flex items-center w-full sm:w-auto justify-center hover:scale-110 transition ease-in-out">
                   <img src="download-icon.svg" className="h-6 mr-2 dark:invert"></img>
                   <span className="text-lg underline">Download Resume</span>
                 </a>
@@ -134,8 +134,8 @@ export default function Home() {
                     <li>Algorithms and Data Structures</li>
                     <li>Object-Oriented Programming</li>
                     <li>Database</li>
-                    <li>Web Based Development</li>
-                    <li>Platform Based Development</li>
+                    <li>Web-Based Development</li>
+                    <li>Platform-Based Development</li>
                     <li>Software Engineering</li>
                   </ul>
                 </div>
@@ -202,13 +202,13 @@ export default function Home() {
 
             <div>
               <Experience 
-                position="Staff of Finance"
+                position="Finance Staff"
                 organization="Inkubator IT HMIF ITB"
                 time="Jan 2022 - Present"
                 imgsrc="/logo_iit.png"
                 points={[
-                  "Assisted 6 project managers in creating project financial documents",
-                  "Performed monthly financial audits"
+                  "Assisted 6 project managers in creating project financial documents.",
+                  "Performed monthly financial audits with a team of 6 in the finance division."
                   ]}/>
 
               <Experience 
@@ -218,7 +218,7 @@ export default function Home() {
                 imgsrc="/logo_infest.png"
                 points={[
                   "Collaborated with a team of 9 people to conduct market research on financial workshops and seminars.",
-                  "Contacted several renowned individuals in the financial industry and successfully got one of them to be a speaker in the seminar."
+                  "Reached out to several renowned individuals in the financial industry and successfully got one of them to be a speaker in the seminar."
                   ]}/>
             </div>
           </section>
