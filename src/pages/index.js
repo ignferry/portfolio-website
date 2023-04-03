@@ -10,12 +10,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   function onFilterButtonClick(keyword) {
-    setFilterKeyword(keyword);
+    if (keyword == filterKeyword) setFilterKeyword("");
+    else setFilterKeyword(keyword);
   }
 
   let [filterKeyword, setFilterKeyword] = useState("");
 
-  let filterKeywords = ["Javascript", "Typescript", "PHP", "Java", "MySQL", "NodeJS", "React", "Laravel"]
+  let filterKeywords = ["Javascript", "Typescript", "PHP", "Java", "MySQL", "NodeJS", "React"]
 
   let projects = [
     {
@@ -29,8 +30,8 @@ export default function Home() {
     {
       title: "Note Taking App",
       techs: ["PHP", "MySQL", "Docker"],
-      desc: "A note taking app",
-      imgsrc: "/logo_iit.png",
+      desc: "/project-img/notetakingapp.png",
+      imgsrc: "/project-img/notetakingapp.png",
       codeurl: "https://github.com/ignferry/Note-Taking-App-PHP",
       main: true
     },
@@ -46,7 +47,6 @@ export default function Home() {
       title: "BNMO Backend",
       techs: ["Typescript", "NodeJS", "MySQL"],
       desc: "A REST API that handles authentication and user transactions (requests and transfers)",
-      imgsrc: "/project-img/aetherwars.png",
       codeurl: "https://github.com/ignferry/AetherWars",
       main: true
     },
@@ -90,24 +90,24 @@ export default function Home() {
             <br />
           </section>
 
-          <hr className="mx-auto bg-black dark:bg-white w-1/2 mt-10"></hr>
+          <hr className="mx-auto bg-black dark:bg-white border-0 w-1/2 mt-10 h-px"></hr>
 
           <section id="education" className="p-6 my-12">
             <h1 className="text-3xl font-bold text-center sm:text-5xl text-slate-900 dark:text-white">
               Education
             </h1>
 
-            <article className="flex flex-col dark:bg-gray-800 mt-4 p-4 sm:w-3/4 m-auto">
+            <article className="flex flex-col bg-gray-200 dark:bg-gray-800 mt-4 p-4 sm:w-3/4 m-auto rounded-xl">
               <div className="flex items-center mb-4 justify-start">
                 <img src="/logo_itb.png" className="h-24 mr-4"></img>
                 <div className="h-fit">
                   <h2 className="text-xl font-bold">Institut Teknologi Bandung</h2>
-                  <p className="text-slate-300">Bachelors Degree - Informatics Engineering</p>
-                  <p className="text-slate-300">2020 - 2024 (Expected)</p>
+                  <p className="text-slate-600 dark:text-slate-300">Bachelors Degree - Informatics Engineering</p>
+                  <p className="text-slate-600 dark:text-slate-300">2020 - 2024 (Expected)</p>
                 </div>
               </div>
               <div className="flex items-stretch">
-                <div className="flex-grow">
+                <div className="flex-grow mr-2">
                   <h3 className="text-xl font-semibold">Relevant Courses:</h3>
                   <ul className="list-disc ml-5">
                     <li>Algorithms and Data Structures</li>
@@ -129,7 +129,7 @@ export default function Home() {
 
           </section>
 
-          <hr className="mx-auto bg-black dark:bg-white w-1/2"></hr>
+          <hr className="mx-auto bg-black dark:bg-white border-0 w-1/2 mt-10 h-px"></hr>
 
           <section id="project-and-skills" className="p-6 my-12">
             <h1 className="text-3xl font-bold text-center sm:text-5xl text-slate-900 dark:text-white">
@@ -171,7 +171,7 @@ export default function Home() {
             </div>
           </section>
 
-          <hr className="mx-auto bg-black dark:bg-white w-1/2"></hr>
+          <hr className="mx-auto bg-black dark:bg-white border-0 w-1/2 mt-10 h-px"></hr>
 
           <section id="org-exp" className="p-6 my-12">
             <h1 className="text-3xl font-bold text-center sm:text-5xl text-slate-900 dark:text-white">
@@ -204,9 +204,11 @@ export default function Home() {
       </main>
 
       <footer className="w-full bg-cyan-700 p-5 h-fit">
-        <div className="max-w-6xl mx-auto flex flex-col items-center gap-4">
-          <p className="font-semibold text-xl">Ignasius Ferry Priguna</p>
-          <p>ignasius.ferry01@gmail.com</p>
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row sm:justify-between items-center gap-4 text-white">
+          <div>
+            <p className="font-semibold text-xl">Ignasius Ferry Priguna</p>
+            <p>ignasius.ferry01@gmail.com</p>
+          </div>
           <div className="flex gap-4">
             <a href="https://www.linkedin.com/in/ignasius-ferry-priguna/" className="w-14 h-14 bg-white rounded-full flex hover:bg-gray-300" target="_blank">
               <img src="/linkedin-logo.svg" className="w-14 h-14 m-auto object-cover"></img>

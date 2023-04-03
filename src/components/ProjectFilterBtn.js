@@ -1,8 +1,8 @@
 export default function ProjectFilterBtn(props) {
-    let colorClass = props.selected ? "bg-green-300 hover:bg-green-400" : "bg-gray-300 hover:bg-gray-400";
+    let colorClass = props.selected ? "bg-green-500 hover:bg-green-700 text-white dark:text-black" : "button";
 
     return <button 
-        className={"text-black font-bold py-2 px-4 rounded inline-flex items-center w-fit " + colorClass}
+        className={"font-bold py-2 px-4 rounded inline-flex items-center w-fit " + colorClass}
         onClick={props.clickHandler}>
             {props.text}
         </button>
