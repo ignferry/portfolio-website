@@ -16,37 +16,53 @@ export default function Home() {
 
   let [filterKeyword, setFilterKeyword] = useState("");
 
-  let filterKeywords = ["Javascript", "Typescript", "PHP", "Java", "MySQL", "NodeJS", "React"]
+  let filterKeywords = ["HTML", "CSS", "Javascript", "Typescript", "PHP", "Java", "Kotlin", "MySQL", "NodeJS", "React", "Docker"]
 
   let projects = [
     {
       title: "Bluesound",
-      techs: ["Java", "Javascript", "MySQL", "NodeJS", "React", "Docker"],
-      desc: "A web based music player which consists of four major components: normal user client and API (Plain PHP), premium user client (Reach), REST API (NodeJS), and SOAP API (Java).",
+      techs: ["HTML", "CSS", "Java", "PHP", "Javascript", "MySQL", "NodeJS", "React", "Docker"],
+      desc: "A web based music player and subscription management which consists of four major components: normal user client and API (PHP), premium user client (React), REST API (NodeJS), and SOAP API (Java). This is a Web Based Development coursework project done by 3 people in which I am mainly in charge of the frontend and backend in PHP and SOAP API in Java.",
       imgsrc: "/project-img/bluesound.png",
       codeurl: "https://gitlab.informatika.org/if3110-2022-k02-01-30",
       main: true
     },
     {
-      title: "Note Taking App",
-      techs: ["PHP", "MySQL", "Docker"],
-      desc: "/project-img/notetakingapp.png",
-      imgsrc: "/project-img/notetakingapp.png",
-      codeurl: "https://github.com/ignferry/Note-Taking-App-PHP",
-      main: true
-    },
-    {
       title: "Aether Wars",
       techs: ["Java", "JavaFX"],
-      desc: "A Minecraft themed turn based card game like Yu-Gi-Oh!.",
+      desc: "A Minecraft themed turn based card game like Yu-Gi-Oh!. This is a Object Oriented Programming coursework project done by 5 people in which I am in charge of creating the GUI with JavaFX and implementing the Publisher-Subscriber design pattern for the game.",
       imgsrc: "/project-img/aetherwars.png",
       codeurl: "https://github.com/ignferry/AetherWars",
       main: true
     },
     {
+      title: "Note Taking Website",
+      techs: ["HTML", "CSS", "PHP", "MySQL", "Docker"],
+      desc: "A note taking website with authentication and CRUD operations for notes. In this project, I designed and created my own routing system and ORM in plain PHP.",
+      imgsrc: "/project-img/notetakingapp.png",
+      codeurl: "https://github.com/ignferry/Note-Taking-App-PHP",
+      main: true
+    },
+    {
+      title: "Portfolio Website",
+      techs: ["HTML", "CSS", "Javascript", "React", "Tailwind CSS"],
+      desc: "A website created to present my profile and projects, also to present my frontend development skills. From this project, I've learned to create responsive web pages and adjustment of appearence based on user light and dark mode preference.",
+      imgsrc: "/project-img/portfolio-web.png",
+      codeurl: "https://github.com/ignferry/portfolio-website",
+      main: true
+    },
+    {
+      title: "Android Food App",
+      techs: ["Kotlin"],
+      desc: "A food themed android application with features such as menu, cart, payment, location list, and twibbon. This is a Platform Based Development project done by 3 people in which I am in charge of the payment and location list page.",
+      codeurl: "https://gitlab.informatika.org/ignferry/if3210-2023-android-ogt",
+      imgsrc: "/project-img/android.png",
+      main: true
+    },
+    {
       title: "BNMO Backend",
-      techs: ["Typescript", "NodeJS", "MySQL"],
-      desc: "A REST API that handles authentication and user transactions (requests and transfers)",
+      techs: ["Typescript", "NodeJS", "MySQL", "Docker"],
+      desc: "A REST API that handles authentication and user financial transactions (requests and transfers). This is one of my first web development project from which I've learned to create REST APIs and use Sequelize ORM",
       codeurl: "https://github.com/ignferry/AetherWars",
       main: true
     },
@@ -69,6 +85,11 @@ export default function Home() {
                 <h1 className="max-w-md text-5xl font-bold text-center sm:text-8xl md:text-9xl sm:text-left text-slate-900 dark:text-white">
                   Hi! I'm Ferry
                 </h1>
+
+                <a href="" target="_blank"className="mt-10 font-semibold py-2 pr-4 rounded inline-flex items-center w-full sm:w-auto justify-center hover:scale-110 transition ease-in-out">
+                  <img src="download-icon.svg" className="h-6 mr-2 dark:invert"></img>
+                  <span className="text-lg underline">Download Resume</span>
+                </a>
 
                 <div className="relative max-w-md text-2xl mt-8 mx-auto sm:mx-0 text-slate-700 dark:text-slate-400">
                   <p className="absolute w-full text-center sm:text-left hero-sub-text">
@@ -93,7 +114,7 @@ export default function Home() {
           <hr className="mx-auto bg-black dark:bg-white border-0 w-1/2 mt-10 h-px"></hr>
 
           <section id="education" className="p-6 my-12">
-            <h1 className="text-3xl font-bold text-center sm:text-5xl text-slate-900 dark:text-white">
+            <h1 className="text-3xl font-bold text-center sm:text-5xl text-slate-900 dark:text-white mb-10">
               Education
             </h1>
 
@@ -108,7 +129,7 @@ export default function Home() {
               </div>
               <div className="flex items-stretch">
                 <div className="flex-grow mr-2">
-                  <h3 className="text-xl font-semibold">Relevant Courses:</h3>
+                  <h3 className="text-xl font-semibold">Relevant Coursework</h3>
                   <ul className="list-disc ml-5">
                     <li>Algorithms and Data Structures</li>
                     <li>Object-Oriented Programming</li>
@@ -122,7 +143,8 @@ export default function Home() {
                 <div className="flex flex-col justify-center flex-grow">
                   <h2 className="text-xl text-center font-semibold">Current GPA</h2>
                   <p className="text-xl text-center">3.76 / 4.0</p>
-                  <p className="text-xl text-center">(As of 6<sup>th</sup> Semester)</p>
+                  <br></br>
+                  <p className="text-xl text-center font-semibold">6<sup>th</sup> Semester</p>
                 </div>
               </div>
             </article>
@@ -132,11 +154,11 @@ export default function Home() {
           <hr className="mx-auto bg-black dark:bg-white border-0 w-1/2 mt-10 h-px"></hr>
 
           <section id="project-and-skills" className="p-6 my-12">
-            <h1 className="text-3xl font-bold text-center sm:text-5xl text-slate-900 dark:text-white">
+            <h1 className="text-3xl font-bold text-center sm:text-5xl text-slate-900 dark:text-white mb-10">
               Projects and Skills
             </h1>
 
-            <div className="mt-4 flex flex-row flex-wrap gap-2">
+            <div className="mt-4 flex flex-row flex-wrap gap-2 justify-center">
               {
                 filterKeywords.map((keyword) => {
                   return <ProjectFilterBtn 
@@ -174,7 +196,7 @@ export default function Home() {
           <hr className="mx-auto bg-black dark:bg-white border-0 w-1/2 mt-10 h-px"></hr>
 
           <section id="org-exp" className="p-6 my-12">
-            <h1 className="text-3xl font-bold text-center sm:text-5xl text-slate-900 dark:text-white">
+            <h1 className="text-3xl font-bold text-center sm:text-5xl text-slate-900 dark:text-white mb-10">
               Organizational and Volunteering Experience
             </h1>
 
