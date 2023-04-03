@@ -63,7 +63,7 @@ export default function Home() {
       title: "BNMO Backend",
       techs: ["Typescript", "NodeJS", "MySQL", "Docker"],
       desc: "A REST API that handles authentication and user financial transactions (requests and transfers). This is one of my first web development project from which I've learned to create REST APIs and use Sequelize ORM.",
-      codeurl: "https://github.com/ignferry/AetherWars",
+      codeurl: "https://github.com/ignferry/BNMO-Backend",
       main: true
     },
   ];
